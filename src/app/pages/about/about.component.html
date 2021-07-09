@@ -1,0 +1,16 @@
+<h2>{{ title }}</h2>
+
+<p>{{ text }}</p>
+
+<img [src]="image" alt="Notre logo">
+
+<ul>
+    <li *ngFor="let movie of bestMovies">
+        {{ movie }}
+    </li>
+</ul>
+
+<p (click)="showAlert($event)">
+    {{ address.street }}<br>
+    {{ address.zipcode }} - {{ address.city }}
+</p>
