@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-show',
+  templateUrl: './show.component.html',
+  styleUrls: ['./show.component.css']
 })
-export class ListComponent implements OnInit {
+export class ShowComponent implements OnInit {
   movies: Array<any> = [];
+  movie: any;
 
-  constructor(){
+  constructor(private route: ActivatedRoute){
     this.movies = [
       {
         id: 1,
@@ -43,8 +45,18 @@ export class ListComponent implements OnInit {
         releasedAt: "1998-01-22",
       },
     ];
+    
+    const id = this.route.snapshot.params['id'];
+
+    for(let movie of this.movies){
+      if(movie.id == id){
+        this.movie = movie;
+      }
+    }
+    console.log(this.movie);
   }
 
   ngOnInit(): void {
   }
+
 }

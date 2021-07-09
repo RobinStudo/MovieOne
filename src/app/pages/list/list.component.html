@@ -1,11 +1,11 @@
 <h2>Nos films</h2>
 
 <div class="movies">
-    <div class="movie" *ngFor="let movie of movies">
-        <img 
-            [src]="movie.picture" 
-            alt="Affiche du film" 
-            (click)="showTitle(movie.title)">
+    <div class="movie" 
+        *ngFor="let movie of movies"
+        [routerLink]="'/film/' + movie.id">
+        <img [src]="movie.picture" alt="Affiche du film">
+            
         <h3>
             <span class="badge" *ngIf="movie.rate >= 4">Top</span>
             {{ movie.title }}
