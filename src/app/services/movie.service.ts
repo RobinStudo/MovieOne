@@ -46,4 +46,12 @@ export class MovieService {
   getAll(){
     return this.movies;
   }
+
+  getOne(id: number){
+    for(let movie of this.getAll()){
+      if(movie.id == id){
+        return movie;
+      }
+    }
+  }
 }
