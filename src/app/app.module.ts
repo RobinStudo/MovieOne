@@ -10,6 +10,7 @@ import { ListComponent } from './pages/list/list.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ShowComponent } from './pages/show/show.component';
 import { HoverDirective } from './directives/hover.directive';
+import { ExpandableDirective } from './directives/expandable.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HoverDirective } from './directives/hover.directive';
     ListComponent,
     AboutComponent,
     ShowComponent,
-    HoverDirective
+    HoverDirective,
+    ExpandableDirective
   ],
   imports: [
     BrowserModule,
