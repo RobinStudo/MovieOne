@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { compareTwoStrings } from 'string-similarity';
 
 @Injectable({
   providedIn: 'root'
@@ -48,10 +49,27 @@ export class MovieService {
   }
 
   getOne(id: number){
-    for(let movie of this.getAll()){
+    for(let movie of this.movies){
       if(movie.id == id){
         return movie;
       }
     }
+  }
+
+  search(query: string){
+    let results = [];
+    query = query.toLowerCase();
+
+    for(let movie of this.movies){
+      const title = movie.title.toLowerCase();
+      
+      if(title.indexOf(query) >= 0){
+        results.push(movie);
+      }else if(compareTwoStrings(title, query) >= 0.5){
+        results.push(movie);
+      }
+    }
+
+    return results;
   }
 }

@@ -15,4 +15,8 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  search(query: string){
+    this.movies = this.movieService.search(query);
+  }
 }

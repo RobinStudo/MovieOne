@@ -1,5 +1,9 @@
 <h2>Nos films</h2>
 
+<div class="search">
+    <input type="search" #searchInput (keyup)="search(searchInput.value)" placeholder="Rechercher ...">
+</div>
+
 <div class="movies">
     <div class="movie" 
         *ngFor="let movie of movies"
