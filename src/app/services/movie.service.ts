@@ -24,7 +24,7 @@ export class MovieService {
         description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique quod, sit, corrupti rerum praesentium eaque dignissimos blanditiis molestias quidem inventore laudantium quaerat error et ad, rem itaque. Rem, recusandae.",
         director: "Quentin Tarantino",
         picture: "https://static.posters.cz/image/750/affiches-et-posters/pulp-fiction-cover-i1288.jpg",
-        rate: 3.5,
+        rate: 3.7,
         releasedAt: "1995-06-22",
       },
       {

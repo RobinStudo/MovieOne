@@ -15,6 +15,7 @@ export class AboutComponent implements OnInit {
     city: "Lille",
     zipcode: 59000,
   };
+  current: Date = new Date();
 
   constructor() {}
 

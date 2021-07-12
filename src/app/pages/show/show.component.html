@@ -5,8 +5,9 @@
     <div>
         <h2>{{ movie.title }}</h2>
         <p>
-            Réalisateur : {{ movie.director }}
+            Réalisateur : {{ movie.director|dot }}
         </p>
+        <p class="star" [innerHTML]="movie.rate|rate"></p>
         <p appExpandable>
             {{ movie.description }}
         </p>

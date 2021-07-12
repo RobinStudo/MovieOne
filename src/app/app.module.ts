@@ -11,6 +11,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { ShowComponent } from './pages/show/show.component';
 import { HoverDirective } from './directives/hover.directive';
 import { ExpandableDirective } from './directives/expandable.directive';
+import { DotPipe } from './pipes/dot.pipe';
+import { RatePipe } from './pipes/rate.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ExpandableDirective } from './directives/expandable.directive';
     AboutComponent,
     ShowComponent,
     HoverDirective,
-    ExpandableDirective
+    ExpandableDirective,
+    DotPipe,
+    RatePipe
   ],
   imports: [
     BrowserModule,
