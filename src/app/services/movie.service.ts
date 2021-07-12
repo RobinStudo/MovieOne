@@ -12,6 +12,7 @@ export class MovieService {
       {
         id: 1,
         title: "The Rock",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique quod, sit, corrupti rerum praesentium eaque dignissimos blanditiis molestias quidem inventore laudantium quaerat error et ad, rem itaque. Rem, recusandae.",
         director: "Michel Bay",
         picture: "https://images-na.ssl-images-amazon.com/images/I/51Qorl8946L._AC_.jpg",
         rate: 4.2,
@@ -20,6 +21,7 @@ export class MovieService {
       {
         id: 2,
         title: "Pulp Fiction",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique quod, sit, corrupti rerum praesentium eaque dignissimos blanditiis molestias quidem inventore laudantium quaerat error et ad, rem itaque. Rem, recusandae.",
         director: "Quentin Tarantino",
         picture: "https://static.posters.cz/image/750/affiches-et-posters/pulp-fiction-cover-i1288.jpg",
         rate: 3.5,
@@ -28,6 +30,7 @@ export class MovieService {
       {
         id: 3,
         title: "Idependence Day",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique quod, sit, corrupti rerum praesentium eaque dignissimos blanditiis molestias quidem inventore laudantium quaerat error et ad, rem itaque. Rem, recusandae.",
         director: "Rolland Emrich",
         picture: "https://images-na.ssl-images-amazon.com/images/I/51K8V3J8EML._AC_SY445_.jpg",
         rate: 1.8,
@@ -36,6 +39,7 @@ export class MovieService {
       {
         id: 4,
         title: "Titanic",
+        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi similique quod, sit, corrupti rerum praesentium eaque dignissimos blanditiis molestias quidem inventore laudantium quaerat error et ad, rem itaque. Rem, recusandae.",
         director: "James Cameron",
         picture: "https://i.ebayimg.com/images/g/OEkAAOSwIUddNNDU/s-l300.jpg",
         rate: 2.5,

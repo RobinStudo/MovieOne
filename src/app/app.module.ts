@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ListComponent } from './pages/list/list.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ShowComponent } from './pages/show/show.component';
+import { HoverDirective } from './directives/hover.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShowComponent } from './pages/show/show.component';
     HomeComponent,
     ListComponent,
     AboutComponent,
-    ShowComponent
+    ShowComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

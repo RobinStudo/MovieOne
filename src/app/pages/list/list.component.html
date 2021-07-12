@@ -1,11 +1,11 @@
 <h2>Nos films</h2>
 
-<div class="search">
+<div class="search" appHover>
     <input type="search" #searchInput (keyup)="search(searchInput.value)" placeholder="Rechercher ...">
 </div>
 
-<div class="movies">
-    <div class="movie" 
+<div class="movies" appHover>
+    <div class="movie"
         *ngFor="let movie of movies"
         [routerLink]="'/film/' + movie.id">
         <img [src]="movie.picture" alt="Affiche du film">
