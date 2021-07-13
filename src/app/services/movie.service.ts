@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { compareTwoStrings } from 'string-similarity';
+import { Movie } from '../models/Movie';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +21,9 @@ export class MovieService {
 
   search(query: string){
     return this.http.get(this.url + '?q=' + query);
+  }
+
+  add(movie: Movie){
+    return this.http.post(this.url, movie);
   }
 }

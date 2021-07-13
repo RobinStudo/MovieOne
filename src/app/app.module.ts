@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { ExpandableDirective } from './directives/expandable.directive';
 import { DotPipe } from './pipes/dot.pipe';
 import { RatePipe } from './pipes/rate.pipe';
 import { LoaderComponent } from './components/loader/loader.component';
+import { AddComponent } from './pages/add/add.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { LoaderComponent } from './components/loader/loader.component';
     ExpandableDirective,
     DotPipe,
     RatePipe,
-    LoaderComponent
+    LoaderComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

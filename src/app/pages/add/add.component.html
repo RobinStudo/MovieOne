@@ -1,0 +1,31 @@
+<form #movieForm="ngForm" (submit)="send()">
+    <div>
+        <input type="text" name="title" placeholder="Titre" 
+        [(ngModel)]="movie.title" #title="ngModel" required minlength="2">
+        <div *ngIf="title.invalid && title.touched">
+            Vous devez remplir le titre
+        </div>
+    </div>
+
+    <div>
+        <input type="text" name="director" #director="ngModel"
+        placeholder="Réalisateur" [(ngModel)]="movie.director" required>
+        <div *ngIf="director.invalid && director.touched">
+            Vous devez remplir le réalisateur
+        </div>
+    </div>
+
+    <div>
+        <textarea placeholder="Description" name="description" [(ngModel)]="movie.description"></textarea>
+    </div>    
+
+    <div>
+        <input type="url" name="picture" placeholder="Image" [(ngModel)]="movie.picture" required>
+    </div>
+
+    <div>
+        <input type="date" name="releasedAt" placeholder="Date de sortie" [(ngModel)]="movie.releasedAt" required>
+    </div>
+
+    <button type="submit" [disabled]="!movieForm.form.valid">Enregistrer</button>
+</form>
