@@ -7,10 +7,16 @@ import { MovieService } from '../../services/movie.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  movies: Array<any> = [];
+  movies: any = [];
 
   constructor(private movieService: MovieService){
-    this.movies = this.movieService.getAll();
+    const observable = this.movieService.getAll();
+
+    observable.subscribe(data => {
+      this.movies = data;
+    }, () => {
+      alert("Une erreur est survenue");
+    });
   }
 
   ngOnInit(): void {
