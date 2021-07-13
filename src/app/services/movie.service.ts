@@ -7,7 +7,7 @@ import { compareTwoStrings } from 'string-similarity';
 })
 export class MovieService {
   movies: Array<any> = [];
-  url: string = 'http://localhost:3000/movies';
+  url: string = 'http://localhost:3000/movies/';
 
   constructor(private http: HttpClient){}
 
@@ -16,11 +16,7 @@ export class MovieService {
   }
 
   getOne(id: number){
-    for(let movie of this.movies){
-      if(movie.id == id){
-        return movie;
-      }
-    }
+    return this.http.get(this.url + id);
   }
 
   search(query: string){

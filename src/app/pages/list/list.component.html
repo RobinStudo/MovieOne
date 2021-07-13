@@ -4,7 +4,7 @@
     <input type="search" #searchInput (keyup)="search(searchInput.value)" placeholder="Rechercher ...">
 </div>
 
-<div class="movies" appHover>
+<div class="movies" *ngIf="movies; else loader">
     <div class="movie"
         *ngFor="let movie of movies"
         [routerLink]="'/film/' + movie.id">
@@ -15,8 +15,12 @@
             {{ movie.title|dot }}
         </h3>
     </div>
+
+    <p *ngIf="movies.length == 0">
+        Aucun film disponible
+    </p>
 </div>
 
-<p *ngIf="movies.length == 0">
-    Aucun film disponible
-</p>
+<ng-template #loader>
+    <app-loader></app-loader>
+</ng-template>

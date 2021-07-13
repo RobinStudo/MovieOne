@@ -1,4 +1,4 @@
-<div class="movie">
+<div class="movie" *ngIf="movie; else loader">
     <div>
         <img [src]="movie.picture" alt="Affiche du film">
     </div>
@@ -13,3 +13,7 @@
         </p>
     </div>
 </div>
+
+<ng-template #loader>
+    <app-loader></app-loader>
+</ng-template>

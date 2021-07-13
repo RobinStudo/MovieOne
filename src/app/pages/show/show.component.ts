@@ -15,7 +15,12 @@ export class ShowComponent implements OnInit {
     private movieService: MovieService
   ){
     const id = this.route.snapshot.params['id'];
-    this.movie = this.movieService.getOne(id);
+    
+    this.movieService.getOne(id).subscribe(data => {
+      this.movie = data;
+    }, () => {
+      alert("Une erreur est survenue");
+    });
   }
 
   ngOnInit(): void {

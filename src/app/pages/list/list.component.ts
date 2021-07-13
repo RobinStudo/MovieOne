@@ -7,7 +7,7 @@ import { MovieService } from '../../services/movie.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  movies: any = [];
+  movies: any;
 
   constructor(private movieService: MovieService){
     const observable = this.movieService.getAll();

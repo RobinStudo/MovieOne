@@ -14,6 +14,7 @@ import { HoverDirective } from './directives/hover.directive';
 import { ExpandableDirective } from './directives/expandable.directive';
 import { DotPipe } from './pipes/dot.pipe';
 import { RatePipe } from './pipes/rate.pipe';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RatePipe } from './pipes/rate.pipe';
     HoverDirective,
     ExpandableDirective,
     DotPipe,
-    RatePipe
+    RatePipe,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
