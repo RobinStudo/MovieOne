@@ -20,19 +20,6 @@ export class MovieService {
   }
 
   search(query: string){
-    let results = [];
-    query = query.toLowerCase();
-
-    for(let movie of this.movies){
-      const title = movie.title.toLowerCase();
-      
-      if(title.indexOf(query) >= 0){
-        results.push(movie);
-      }else if(compareTwoStrings(title, query) >= 0.5){
-        results.push(movie);
-      }
-    }
-
-    return results;
+    return this.http.get(this.url + '?q=' + query);
   }
 }

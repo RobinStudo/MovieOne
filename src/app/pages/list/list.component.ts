@@ -8,6 +8,7 @@ import { MovieService } from '../../services/movie.service';
 })
 export class ListComponent implements OnInit {
   movies: any;
+  timer: any;
 
   constructor(private movieService: MovieService){
     const observable = this.movieService.getAll();
@@ -23,6 +24,15 @@ export class ListComponent implements OnInit {
   }
 
   search(query: string){
-    this.movies = this.movieService.search(query);
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      const observable = this.movieService.search(query);
+
+      observable.subscribe(data => {
+        this.movies = data;
+      }, () => {
+        alert("Une erreur est survenue");
+      });
+    }, 600);
   }
 }
